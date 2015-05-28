@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style>
+        .chart-wrapper {
+            width: auto;
+            height: 400px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="chart" class="chart-wrapper"></div>
+</div>
+<script src="../../doc/asset/js/esl/esl.js" type="text/javascript"></script>
+<script type="text/javascript">
+    require.config({
+        packages: [
+            {
+                name: 'jquery',
+                location: '../../dep/jquery/1.9.1/src',
+                main: 'jquery'
+            },
+            {
+                name: 'echarts',
+                location: '../../src',
+                main: 'echarts'
+            },
+            {
+                name: 'zrender',
+                //location: 'http://ecomfe.github.io/zrender/src',
+                location: '../../dep/zrender/src',
+                main: 'zrender'
+            }
+        ]
+    });
+
+    require(['map'], function(map){
+        map.init();
+    });
+</script>
+</body>
+</html>
