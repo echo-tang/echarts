@@ -40,8 +40,7 @@
                     <textarea id="code" name="code">
 option = {
     title : {
-        text: '树图',
-        subtext: '虚构数据'
+        text: '中国省市'
     },
     toolbox: {
         show : true,
@@ -52,104 +51,138 @@ option = {
             saveAsImage : {show: true}
         }
     },
-    calculable : false,
-
     series : [
         {
             name:'树图',
             type:'tree',
-            orient: 'vertical',  // vertical horizontal
-            rootLocation: {x: 'center',y: 50}, // 根节点位置  {x: 100, y: 'center'}
-            nodePadding: 1,
+            orient: 'horizontal',  // vertical horizontal
+            rootLocation: {x: 100,y: 230}, // 根节点位置  {x: 100, y: 'center'}
+            nodePadding: 15,
+            layerPadding: 200,
+            hoverable: false,
+            symbolSize: 6,
+            roam: true,
             itemStyle: {
                 normal: {
+                    color: '#4883b4',
                     label: {
-                        show: false,
-                        formatter: "{b}"
+                        show: true,
+                        position: 'right',
+                        formatter: "{b}",
+                        textStyle: {
+                            color: '#000',
+                            fontSize: 5
+                        }
                     },
                     lineStyle: {
-                        color: '#48b',
-                        shadowColor: '#000',
-                        shadowBlur: 3,
-                        shadowOffsetX: 3,
-                        shadowOffsetY: 5,
+                        color: '#ccc',
                         type: 'curve' // 'curve'|'broken'|'solid'|'dotted'|'dashed'
 
                     }
                 },
                 emphasis: {
+                    color: '#4883b4',
                     label: {
-                        show: true
-                    }
+                        show: false
+                    },
+                    borderWidth: 0
                 }
             },
             
             data: [
                 {
-                    name: '根节点',
-                    value: 6,
+                    name: '中国',
                     children: [
                         {
-                            name: '节点1',
-                            value: 4,
+                            name: '直辖市',
                             children: [
                                 {
-                                    name: '叶子节点1',
-                                    value: 4
+                                    name: '北京'
                                 },
                                 {
-                                    name: '叶子节点2',
-                                    value: 4
-                                },
-                                {
-                                    name: '叶子节点3',
-                                    value: 2
-                                },
-                                 {
-                                    name: '叶子节点4',
-                                    value: 2
-                                },
-                                {
-                                    name: '叶子节点5',
-                                    value: 2
-                                },
-                                {
-                                    name: '叶子节点6',
-                                    value: 4
+                                    name: '上海'
+                                },{
+                                    name: '天津'
+                                },{
+                                    name: '重庆'
                                 }
                             ]
                         },
                         {
-                            name: '节点2',
-                            value: 4,
-                            children: [{
-                                name: '叶子节点7',
-                                value: 4
-                            },
-                            {
-                                name: '叶子节点8',
-                                value: 4
-                            }]
-                        },
-                        {
-                            name: '节点3',
-                            value: 1,
+                            name: '特别行政区',
                             children: [
                                 {
-                                    name: '叶子节点9',
-                                    value: 4
-                                },
+                                    name: '香港'
+                                },{
+                                    name: '澳门'
+                                }
+                            ]
+                        },
+                        {
+                            name: '自治区',
+                            children: [
                                 {
-                                    name: '叶子节点10',
-                                    value: 4
-                                },
+                                    name: '内蒙古'
+                                },{
+                                    name: '新疆'
+                                },{
+                                    name: '西藏'
+                                },{
+                                    name: '宁夏'
+                                },{
+                                    name: '广西'
+                                }
+                            ]
+                        },
+                        {
+                            name: '省',
+                            children: [
                                 {
-                                    name: '叶子节点11',
-                                    value: 2
-                                },
-                                 {
-                                    name: '叶子节点12',
-                                    value: 2
+                                    name: '黑龙江省'
+                                },{
+                                    name: '辽宁省'
+                                },{
+                                    name: '吉林省'
+                                },{
+                                    name: '河北省'
+                                },{
+                                    name: '河南省'
+                                },{
+                                    name: '湖北省'
+                                },{
+                                    name: '湖南省'
+                                },{
+                                    name: '山东省'
+                                },{
+                                    name: '山西省'
+                                },{
+                                    name: '陕西省'
+                                },{
+                                    name: '安徽省'
+                                },{
+                                    name: '浙江省'
+                                },{
+                                    name: '江苏省'
+                                },{
+                                    name: '福建省'
+                                },{
+                                    name: '广东省'
+                                },{
+                                    name: '海南省'
+                                },{
+                                    name: '四川省'
+                                },{
+                                    name: '云南省'
+                                },{
+                                    name: '贵州省'
+                                },{
+                                    name: '青海省'
+                                },{
+                                    name: '甘肃省'
+                                },{
+                                    name: '江西省'
+                                },{
+                                    name: '台湾省'
                                 }
                             ]
                         }

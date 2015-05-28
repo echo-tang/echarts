@@ -194,6 +194,8 @@ define(function(require) {
             buildHierarchy(data[i], rootNode);
         }
 
+        tree.root.updateDepthAndHeight(0);
+
         return tree;
     };
 
